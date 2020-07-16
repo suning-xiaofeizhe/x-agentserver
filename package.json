@@ -1,0 +1,38 @@
+{
+  "name": "x-agentserver",
+  "version": "1.0.0",
+  "description": "xnpp agentserver",
+  "main": "dispatch.js",
+  "scripts": {
+    "app": "npm i --production && pm2 kill && pm2 start dispatch.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=dev nodemon dispatch.js",
+    "lint": "eslint lib proxy *.js --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:suning-xiaofeizhe/x-agentserver.git"
+  },
+  "keywords": [
+    "xnpp",
+    "agentserver"
+  ],
+  "author": "hyj1991",
+  "license": "MIT",
+  "dependencies": {
+    "address": "^1.1.2",
+    "agentkeepalive": "^4.0.2",
+    "ali-rds": "^3.3.0",
+    "eslint": "^6.3.0",
+    "koa": "^2.8.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "mini-logger": "^1.1.3",
+    "urllib": "^2.34.1",
+    "uuid": "^3.3.3",
+    "ws": "^7.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
